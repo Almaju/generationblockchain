@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hello World DApp</title>
+  <title>Voting DApp</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
   <style>
@@ -11,14 +11,14 @@
   </style>
 </head>
 <body class="container">
-  <h1>A Simple Hello World Voting Application</h1>
+  <h1>Election du président de VotingChain :</h1>
   <div class="col-sm-7 margin-top-3">
-    <h2>Candidates</h2>
+    <h2>Candidats</h2>
     <div class="table-responsive">
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>Candidate</th>
+            <th>Candidat</th>
             <th>Votes</th>
           </tr>
         </thead>
@@ -27,15 +27,15 @@
       </table>
     </div>
     <div class="container-fluid">
-      <h2>Vote for Candidate</h2>
+      <h2>Votez pour votre candidat</h2>
       <div id="msg"></div>
-      <input type="text" id="candidate" placeholder="Enter the candidate name"/>
+      <input type="text" id="candidate" placeholder="Entrez son nom..."/>
       <br>
       <br>
-      <input type="text" id="vote-tokens" placeholder="Total no. of tokens to vote"/>
+      <input type="text" id="vote-tokens" placeholder="Combien de parts voulez-vous lui donner ?"/>
       <br>
       <br>
-      <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
+      <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Voter</a>
     </div>
   </div>
   <div class="col-sm-offset-1 col-sm-4 margin-top-3">
@@ -44,37 +44,37 @@
       <div class="table-responsive">
         <table class="table table-bordered">
           <tr>
-            <td>Tokens For Sale</td>
+            <td>Parts restantes à vendre</td>
             <td id="tokens-total"></td>
           </tr>
           <tr>
-            <td>Tokens Sold</td>
+            <td>Parts vendues</td>
             <td id="tokens-sold"></td>
           </tr>
           <tr>
-            <td>Price Per Token</td>
+            <td>Prix / part</td>
             <td id="token-cost"></td>
           </tr>
           <tr>
-            <td>Balance in the contract</td>
+            <td>Bilan dans le contract</td>
             <td id="contract-balance"></td>
           </tr>
         </table>
       </div>
     </div>
     <div class="row margin-top-3">
-      <h2>Purchase Tokens</h2>
+      <h2>Acheter des parts</h2>
       <div class="col-sm-12">
         <div id="buy-msg"></div>
-        <input type="text" id="buy" class="col-sm-8" placeholder="Number of tokens to buy"/>&nbsp;
-        <a href="#" onclick="buyTokens()" class="btn btn-primary">Buy</a>
+        <input type="text" id="buy" class="col-sm-8" placeholder="Nombre de parts à acheter"/>&nbsp;
+        <a href="#" onclick="buyTokens()" class="btn btn-primary">Acheter</a>
       </div>
     </div>
     <div class="row margin-top-3">
-      <h2>Lookup Voter Info</h2>
+      <h2>Obtenir des informations sur un votant</h2>
       <div class="col-sm-12">
-        <input type="text" id="voter-info", class="col-sm-8" placeholder="Enter the voter address" />&nbsp;
-        <a href="#" onclick="lookupVoterInfo()" class="btn btn-primary">Lookup</a>
+        <input type="text" id="voter-info", class="col-sm-8" placeholder="Votant ID" />&nbsp;
+        <a href="#" onclick="lookupVoterInfo()" class="btn btn-primary">Voir</a>
         <div class="voter-details row text-left">
           <div id="tokens-bought" class="margin-top-3 col-md-12"></div>
           <div id="votes-cast" class="col-md-12"></div>
