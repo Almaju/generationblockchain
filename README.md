@@ -55,6 +55,7 @@ On peut y accéder via http://localhost:8080
 
 ### Utilisation
 Installez MetaMask pour interagir avec les wallets : https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?authuser=2
+Il faut configurer MetaMask pour pointer sur l'IP sur cluster.
 
 ### Personnalisation
 Model :
