@@ -1,5 +1,6 @@
 # Génération Blockchain
 Ce projet utlise Ethereum pour le protocole, un container Docker pour le cluster privé, NodeJS et Truffle pour la dApp.
+Il s'agit d'un MVP créé pour prouver la possiblité d'utiliser la technologie de la blockchain afin de proposer un système de vote en AG pour les entreprises.
 Tous les tests ont été effectués via des machines Ubuntu sur des instances AWS.
 
 ## Mode d'emploi
@@ -49,6 +50,9 @@ npm run dev
 ```
 
 On peut y accéder via http://localhost:8080
+
+### Utilisation
+Installez MetaMask pour interagir avec les wallets : https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?authuser=2
 
 ### Personnalisation
 Model :
