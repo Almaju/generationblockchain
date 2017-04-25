@@ -5,19 +5,30 @@ Tous les tests ont été effectués via des machines Ubuntu sur des instances AW
 
 ## Mode d'emploi
 ### Créer le cluster privé Ethereum
-Clonez ce repository : https://github.com/Capgemini-AIE/ethereum-docker et installez Docker ainsi que Docker Compose. Puis executez cette commande dans le dossier ethereum-docker.
+Clonez ce repository : https://github.com/Capgemini-AIE/ethereum-docker et installez Docker ainsi que Docker Compose. 
 ```
-docker-compose up -d
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+sudo apt-get update
+sudo apt-get install docker-ce docker-compose
+```
+
+Puis executez cette commande dans le dossier ethereum-docker.
+```
+sudo docker-compose up -d
 ```
 
 Pour augmenter ou réduire le nombre de noeuds :
 ```
-docker-compose scale eth=3
+sudo docker-compose scale eth=3
 ```
 
 Pour se connecter à la console geth (pour intéragir directement avec la blockchain) :
 ```
-docker exec -it ethereumdocker_eth_X /geth attach ipc://root/.ethereum/devchain/geth.ipc
+sudo docker exec -it ethereumdocker_eth_X /geth attach ipc://root/.ethereum/devchain/geth.ipc
 ```
 Dans la console geth, on peut notammenter lancer le minage avec `miner.start();` ou le stopper avec `miner.stop();` (voir la doc de geth).
 Attention, dans `ethereumdocker_eth_X` il faut remplacer X par le numéro du noeud que vous souhaitez configurer.
