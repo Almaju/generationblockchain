@@ -10,7 +10,7 @@ contract Voting {
     /* We have an array of candidates initialized below.
      Every time this voter votes with her tokens, the value at that
      index is incremented. Example, if candidateList array declared
-     below has ["Rama", "Nick", "Jose"] and this
+     below has ["Alexandre", "Zoé", "Astrid"] and this
      voter votes 10 tokens to Nick, the tokensUsedPerCandidate[1]
      will be incremented by 10.
      */
