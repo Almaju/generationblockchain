@@ -7,11 +7,11 @@ contract Voting {
     address voterAddress; // The address of the voter
     uint tokensBought;    // The total no. of tokens this voter owns
     uint[] tokensUsedPerCandidate; // Array to keep track of votes per candidate.
-    /* We have an array of candidates initialized below.
+    /* We have an array of candidates initialized.
      Every time this voter votes with her tokens, the value at that
      index is incremented. Example, if candidateList array declared
-     below has ["Alexandre", "Zoé", "Astrid"] and this
-     voter votes 10 tokens to Nick, the tokensUsedPerCandidate[1]
+     below has ["Alexandre", "Zoe", "Astrid"] and this
+     voter votes 10 tokens to Zoe, the tokensUsedPerCandidate[1]
      will be incremented by 10.
      */
   }
