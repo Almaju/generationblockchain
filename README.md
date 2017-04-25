@@ -39,7 +39,7 @@ Pour accéder à l'ethereum netstat : http://localhost:3000
 Clonez ce repository puis ouvrez une console dans le dossier :
 ```
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-sudo apt-get install -y nodejs
+sudo apt-get install -y nodejs build-essential
 npm install
 npm install -g truffle
 ```
