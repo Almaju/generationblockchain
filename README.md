@@ -1,5 +1,5 @@
 # Génération Blockchain
-Ce projet utlise Ethereum pour le protocole, un container Docker pour le cluster privé, NodeJS et Truffle pour la dApp.
+Ce projet utlise Ethereum pour le protocole, un container Docker pour le cluster privé, NodeJS et Truffle pour la DApp.
 Il s'agit d'un MVP créé pour prouver la possiblité d'utiliser la technologie de la blockchain afin de proposer un système de vote en AG pour les entreprises.
 Tous les tests ont été effectués via des machines Ubuntu sur des instances AWS.
 
@@ -35,7 +35,7 @@ Attention, dans `ethereumdocker_eth_X` il faut remplacer X par le numéro du noe
 
 Pour accéder à l'ethereum netstat : http://localhost:3000
 
-### Installer la dApp
+### Installer la DApp
 Clonez ce repository puis ouvrez une console dans le dossier :
 ```
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
@@ -80,4 +80,4 @@ View :
 
 ### Sources
 Docker : https://capgemini.github.io/blockchain/ethereum-docker-compose/
-dApp : https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-2-30b3d335aa1f
+DApp : https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-2-30b3d335aa1f
