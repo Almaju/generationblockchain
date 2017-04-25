@@ -17,8 +17,10 @@ docker-compose scale eth=3
 
 Pour se connecter à la console geth (pour intéragir directement avec la blockchain) :
 ```
-docker exec -it ethereumdocker_eth_1 /geth attach ipc://root/.ethereum/devchain/geth.ipc
+docker exec -it ethereumdocker_eth_X /geth attach ipc://root/.ethereum/devchain/geth.ipc
 ```
+Dans la console geth, on peut notammenter lancer le minage avec `miner.start();` ou le stopper avec `miner.stop();` (voir la doc de geth).
+Attention, dans `ethereumdocker_eth_X` il faut remplacer X par le numéro du noeud que vous souhaitez configurer.
 
 Pour accéder à l'ethereum netstat : http://localhost:3000
 
