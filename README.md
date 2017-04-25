@@ -1,5 +1,5 @@
 # Génération Blockchain
-Ce projet utlise Ethereum pour le protocole, un container Docker pour le cluster privé, NodeJS et Truffle pour le client.
+Ce projet utlise Ethereum pour le protocole, un container Docker pour le cluster privé, NodeJS et Truffle pour la dApp.
 Tous les tests ont été effectués via des machines Ubuntu sur des instances AWS.
 
 ## Mode d'emploi
@@ -21,7 +21,7 @@ docker exec -it ethereumdocker_eth_1 /geth attach ipc://root/.ethereum/devchain/
 
 Pour accéder à l'ethereum netstat : http://localhost:3000
 
-### Installer le client
+### Installer la dApp
 Clonez ce repository puis ouvrez une console dans le dossier :
 ```
 curl -sL https://deb.nodesource.com/setup_7.... | sudo -E bash -
@@ -35,7 +35,7 @@ Attention, il faut parfois installer truffle avec sudo selon où sont les fichie
 Maintenant, il faut déverouiller le compte courant pour migrer le certificat :
 ```
 truffle console
-> web3.personal.unlockAccount(web3.personal.listAccounts[0],"password",15000);
+> web3.personal.unlockAccount(web3.personal.listAccounts[0],"",15000);
 ```
 
 On quitte la console et on migre les certificats :
@@ -49,3 +49,16 @@ npm run dev
 ```
 
 On peut y accéder via http://localhost:8080
+
+### Personnalisation
+Model :
+/contracts/Voting.sol
+
+Controller :
+/app/javascripts/app.js
+
+View :
+/app/index.html
+
+### Sources
+dApp : https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-2-30b3d335aa1f
